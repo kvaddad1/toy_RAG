@@ -1,0 +1,59 @@
+* LlamaIndex is a popular data framework that helps developers build applications with Large Language Models (LLMs). Here's what it does:
+
+-Data Connection
+Helps connect LLMs to your private or external data sources
+Supports various data types like PDFs, documents, APIs, databases
+
+-Data Processing
+Creates efficient indexes of your data
+Structures information in a way that LLMs can easily understand and use
+Handles data chunking and embedding creation
+
+-Retrieval
+Helps find relevant information from your data when needed
+Enables semantic search through your documents
+Supports different querying strategies
+
+-Application Building
+Makes it easier to build RAG (Retrieval-Augmented Generation) applications
+Provides tools for question-answering systems
+Helps create chatbots that can access your specific data
+
+In summary, LlamaIndex is a dataframework that processes your raw data (private data like documents, PDFs, etc.)
+It uses embedding models to convert text chunks into vectors
+These vectors are stored in a vector database (like Milvus or Qdrant)
+When a query comes in, the system:
+Converts the query to a vector
+Uses the vector database to find similar vectors (relevant information)
+Retrieves the matching original text
+Sends this context to the LLM for final response
+
+[Your private data -> LlamaIndex -> Vector Database -> LLM Application] 
+- LlamaIndex → Uses External Embedding Models → Gets Vector Embeddings
+             (like OpenAI's API, HuggingFace models, Cohere's API)
+
+- LlamaIndex → Uses External Embedding Models → Gets Vector Embeddings - Vector databases
+              (like OpenAI's API, HuggingFace models, Cohere's API)
+
+* Hugging Face is like an app store → You download models and run them yourself, whereas Cohere is like a web service → You make API calls to use their models
+
+* Vector databases examples for instance: 
+- Milvus:
+Open-source vector database built for massive scale
+Strong at handling billions of vectors
+Supports multiple similarity metrics (Euclidean, Inner Product, etc.)
+Written in Go and C++
+Often used in very large production deployments
+Has both standalone and cluster modes
+Good for complex hybrid searches (combining vector and scalar queries)
+
+-Qdrant:
+Vector database written in Rust
+Generally simpler to set up and use
+Very fast for medium-sized deployments
+Excellent built-in filtering capabilities
+Strong focus on payload management
+Great for getting started and smaller to medium deployments
+Has a particularly clean API design
+Good documentation and easier learning curve
+
