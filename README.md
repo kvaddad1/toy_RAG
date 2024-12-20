@@ -1,6 +1,10 @@
-# toy_RAG
+## toy_RAG
 This is to play and generate TOY RAG system using Cohere and Qdrant API 
-
+## basic info (credit: slide images from the course listed at end of this README)
+![](slide_images/image1.png)
+![](slide_images/image2.png)
+![](slide_images/image3.png)
+![](slide_images/image4.png)
 
 ### Create project directory
 ```bash
